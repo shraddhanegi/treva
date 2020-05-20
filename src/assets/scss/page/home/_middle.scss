@@ -1,0 +1,32 @@
+.full-width {
+	margin-top: 70px;
+	@include sm {
+		margin-top: 130px;
+	}
+
+	&__mid-bg {
+		background: url('../images/background/bg.png') no-repeat;
+		max-width: 100%;
+		background-size: 110%;
+		height: 8rem;
+		@include sm {
+			height: 20rem;
+		}
+		@include md {
+			height: 25rem;
+		}
+
+		@include lg {
+			height: 30rem;
+		}
+	}
+
+	&__footer-bg {
+		background: url('../images/background/bg-footer.png') no-repeat;
+		max-width: 100%;
+		min-height: 330px;
+		height: 480px;
+		background-size: 100%;
+	}
+	@include pie-clearfix;
+}

@@ -1,0 +1,172 @@
+
+// Extra large devices
+@mixin xs {
+	@media (min-width: #{$bp-xs}) {
+		@content;
+	}
+}
+// Small devices
+@mixin sm {
+	@media (min-width: #{$bp-sm}) {
+		@content;
+	}
+}
+
+// Medium devices
+@mixin md {
+	@media (min-width: #{$bp-md}) {
+		@content;
+	}
+}
+
+// Large devices
+@mixin lg {
+	@media (min-width: #{$bp-lg}) {
+		@content;
+	}
+}
+
+@mixin clearfix {
+	overflow: hidden;
+}
+
+@mixin pie-clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin reset-box-model {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+@mixin reset-list-style {
+	list-style: none;
+}
+
+/*
+@mixin heading($font-size,$line-height,$color,$font-weight) {
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $color;
+	font-weight: $font-weight;
+	text-align: center;
+}
+@mixin subheading($font-size, $line-height,$color,$font-weight) {
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $color;
+	font-weight: $font-weight;
+}
+*/
+@mixin border-radius($top-left:10px, $top-right:null, $bottom-right:null, $bottom-left:null) {
+	-webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+	-moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+	-ms-border-radius: $top-left $top-right $bottom-right $bottom-left;
+	border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+@mixin user-select($select) {
+	-webkit-user-select: $select;
+	-moz-user-select: $select;
+	-ms-user-select: $select; // IE10+
+	user-select: $select;
+}
+
+@mixin button($padding,$background,$color,$font-size,$border) {
+	padding: $padding;
+	background: $background;
+	font-size: $font-size;
+	color: $color;
+	font-weight: $medium-weight;
+	text-align: center;
+	@include border-radius($border);
+}
+// mixin for tripozoid shape
+
+@mixin trapezoid($base-up,$base-down,$height,$color,$direction,$border) {
+	//$base-up:
+	//$base-down:
+	//$height:
+	//$color:
+	//$direction: (top,bottom,left,right)
+	height: 0;
+	border-style: solid;
+	border-radius: $border;
+	@if ($direction == left) {
+		&::before {
+			content: " ";
+			left: -2px;
+			//right: 740px;
+			top: 0;
+			position: absolute;
+			background: $color;
+			border-radius: 20px 80px 80px 0;
+			width: 18px;
+			height: $height;
+		}
+
+		border-width: 0 20px 80px 870px;
+		//border-width: 0 $height ($base-down - $base-up) / 2 $height;
+		border-color: transparent transparent transparent $color;
+		height: $height;
+	}
+	@if ($direction == right) {
+		border-width: ($base-down - $base-up) / 2 $height;
+		border-color: transparent $color transparent transparent;
+		margin-left: -$height;
+		height: $base-up;
+
+		&::before {
+			content: " ";
+			left: -2px;
+			top: 0;
+			position: absolute;
+			background: $color;
+			border-radius: 20px 80px 80px 0;
+			width: 18px;
+			height: $base-up;
+		}
+	}
+}
+
+/* mixin for tabs  */
+$tab-count: 3;
+$indicator-width: 250px;
+$indicator-height: 4px;
+
+/* breakpoints */
+$breakpoints: (
+	medium: #{$tab-count*250px},
+	small: #{$tab-count*150px}
+);
+
+/* selectors relative to radio inputs */
+$label-selector: "~ ul > li";
+$slider-selector: "~ .slider";
+$content-selector: "~ .content > section";
+
+@mixin tabs(
+	$label-selector: $label-selector,
+	$slider-selector: $slider-selector,
+	$content-selector: $content-selector) {
+
+	@for $i from 1 through $tab-count {
+		&:nth-of-type(#{$i}):checked {
+			#{$label-selector}:nth-child(#{$i}) {
+				@content;
+			}
+
+			#{$slider-selector} {
+				transform: translateX(#{100% * ($i - 1)});
+			}
+
+			#{$content-selector}:nth-child(#{$i}) {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,72 @@
+@import "~susy/sass/susy";
+@import "~breakpoint-sass/stylesheets/breakpoint"; // Breakpoint
+
+$susy: (
+	columns: 12,
+	gutters: 1/4,
+	math: fluid,
+	output: float,
+	gutter-poistion: inside
+);
+
+$map-xs: (
+	container: 100%,
+	container-space-right: 0,
+	container-space-left: 20px,
+	gutters: $gutter-width-xs/$column-width-xs,
+	column-width: $column-width-xs
+);
+
+$map-sm: (
+	container: 100%,
+	container-space-right: 40px,
+	container-space-left: 40px,
+	gutters: $gutter-width-sm/$column-width-sm,
+	column-width: $column-width-sm
+);
+
+$map-md: (
+	container: 1024px,
+	container-space-right: 80px,
+	container-space-left: 80px,
+	gutters: $gutter-width-md/$column-width-md,
+	column-width: $column-width-md
+);
+
+$map-lg: (
+	container: 1440px,
+	container-space-right: 120px,
+	container-space-left: 120px,
+	gutters: $gutter-width-lg/$column-width-lg,
+	column-width: $column-width-lg
+);
+
+@include xs {
+	.main {
+		@include span(12);
+		@include pie-clearfix;
+	}
+
+	.container {
+		@include container(83%);
+	}
+}
+
+// .main {
+// 	@include span(7);
+
+// 	@include pie-clearfix;
+// }
+
+// .container {
+// 	@include container(83%);
+// }
+
+.section {
+	@include container;
+
+	&__column {
+		@include span(6);
+		@include push(3);
+	}
+}

@@ -1,0 +1,10 @@
+
+body {
+   font-size: 18px;
+}
+.header{
+    background: -moz-radial-gradient();
+}
+.headerBg{
+    background: url('./../images/background/bg.png') center center no-repeat;
+}

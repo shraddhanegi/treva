@@ -1,0 +1,150 @@
+// Weights
+$hairline-weight: 100;
+$thin-weight:     200;
+$light-weight:    300;
+$normal-weight:   400;
+$medium-weight:   500;
+$semibold-weight: 600;
+$bold-weight:     700;
+$xbold-weight:    800;
+$black-weight:    900;
+
+//size
+
+// Synonyms
+$regular-weight:    $normal-weight;
+$book-weight:       $light-weight;
+$xlight-weight:     $hairline-weight;
+$ultralight-weight: $hairline-weight;
+$heavy-weight:      $xbold-weight;
+
+$metropolis-family: "Metropolis";
+@font-face {
+	font-family: "Metropolis";
+	src: url('../fonts/Metropolis/Metropolis-Regular.ttf') format('opentype');
+	font-weight: 300;
+}
+$business-font: quote($metropolis-family);
+$font-size-base: 0.875rem;
+$line-height-base: 1.375rem;
+
+// section Navigation
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon/icomoon.eot?m3zj5b');
+	src:
+		url('../fonts/icomoon/icomoon.eot?m3zj5b#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.ttf?m3zj5b') format('truetype'),
+		url('../fonts/icomoon/icomoon.woff?m3zj5b') format('woff'),
+		url('../fonts/icomoon/icomoon.svg?m3zj5b#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow::before {
+	content: "\e90f";
+	color: #37474f;
+}
+
+.icon-applied-1 .path1::before {
+	content: "\e90d";
+	color: rgb(3, 211, 226);
+	opacity: 0.204;
+}
+
+.icon-applied-1 .path2::before {
+	content: "\e90e";
+	margin-left: -1em;
+	color: rgb(0, 160, 171);
+}
+
+.icon-fb-1::before {
+	content: "\e90a";
+	color: #4267b2;
+}
+
+.icon-twitter::before {
+	content: "\e90b";
+	color: #1da1f2;
+}
+
+.icon-instagrame::before {
+	content: "\e90c";
+	color: #df0142;
+}
+
+.icon-applied_red .path1::before {
+	content: "\e900";
+	color: rgb(253, 94, 94);
+	opacity: 0.204;
+}
+
+.icon-applied_red .path2::before {
+	content: "\e901";
+	margin-left: -1em;
+	color: rgb(253, 94, 94);
+}
+
+.icon-assigned_green .path1::before {
+	content: "\e902";
+	color: rgb(73, 166, 82);
+	opacity: 0.204;
+}
+
+.icon-assigned_green .path2::before {
+	content: "\e903";
+	margin-left: -1.021484375em;
+	color: rgb(73, 166, 82);
+}
+
+.icon-assigned_grey .path1::before {
+	content: "\e904";
+	color: rgb(19, 2, 66);
+	opacity: 0.204;
+}
+
+.icon-assigned_grey .path2::before {
+	content: "\e905";
+	margin-left: -1.021484375em;
+	color: rgb(19, 2, 66);
+}
+
+.icon-job .path1::before {
+	content: "\e906";
+	color: rgb(251, 20, 136);
+}
+
+.icon-job .path2::before {
+	content: "\e907";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+
+.icon-post .path1::before {
+	content: "\e908";
+	color: rgb(119, 150, 254);
+}
+
+.icon-post .path2::before {
+	content: "\e909";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}

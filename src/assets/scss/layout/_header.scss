@@ -1,0 +1,53 @@
+.header {
+	margin-top: 80px;
+
+	h1 {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__bottom-txt {
+		@include span(10);
+
+		margin-left: $gutter-width-xs;
+		margin-right: $gutter-width-xs;
+		margin-top: 35px;
+		text-align: center;
+		font-size: 1.2rem;
+		line-height: 2rem;
+		@include lg {
+			@include span(6);
+
+			margin-left: gutter(1);
+			margin-right: gutter(1);
+			font-size: 1.5rem;
+			line-height: 2.5rem;
+		}
+	}
+
+	&__menu {
+		margin-top: 68px;
+		margin-left: $gutter-width-xs;
+		margin-right: $gutter-width-xs;
+		@include span(10);
+		@include lg {
+			@include span(6);
+
+			margin-left: gutter(1);
+			margin-right: gutter(1);
+		}
+
+		text-align: center;
+		@include pie-clearfix;
+	}
+
+	&__hire {
+		@extend .button__royal_blue;
+	}
+
+	&__work {
+		@extend .button__white_medium;
+	}
+
+	@include pie-clearfix;
+}

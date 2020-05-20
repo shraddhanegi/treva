@@ -1,0 +1,136 @@
+.hire {
+	margin-top: 60px;
+
+	h2 {
+		display: none;
+		@include lg {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__menu {
+		display: none;
+		@include lg {
+			display: block;
+			margin-top: 75px;
+			height: 250px;
+		}
+		@extend .section__column;
+		@extend .tabs;
+		@include pie-clearfix;
+	}
+
+	&__article-first {
+		display: none;
+		@include lg {
+			display: block;
+		}
+
+		position: relative;
+
+		&__text {
+
+			@include span(4);
+			@include push(2.5);
+
+			top: 200px;
+			z-index: 3;
+			position: absolute;
+
+			p {
+				margin-top: 20px;
+				line-height: 31px;
+				color: $white;
+				z-index: 2;
+			}
+		}
+		@include pie-clearfix;
+	}
+
+	&__trapezoid-left {
+
+		//height 360
+		@include push(2);
+		//trapezoid($base-up,$base-down,$height,$color,$direction)
+		//$base-up:
+		//$base-down:
+		//$height:
+		//$color:
+		//$direction: (top,bottom,left,right)
+		//0 20px 79px 870px
+		@include trapezoid(200px,600px,360px,$blueberry,left,20px);
+
+		position: absolute;
+		top: 130px;
+		z-index: 2;
+	}
+
+	&__img-right {
+		//height 580
+
+		@include span(6 last);
+		@include pull(1);
+
+		background: url('../images/sections/hire_right.png') no-repeat;
+		height: 815px;
+		max-width: 100%;
+		background-size: 133% 80%;
+	}
+
+	/** orange section **/
+
+	&__article-second {
+		top: 1000px;
+		position: relative;
+
+		&__text {
+
+			@include span(6 last);
+			@include pull(2);
+
+			z-index: 2;
+			position: absolute;
+			top: 60px;
+			right: 0;
+
+			p {
+				margin-top: 20px;
+				line-height: 31px;
+				color: $white;
+				z-index: 2;
+			}
+		}
+	}
+
+	&__trapezoid-right {
+
+		//	@include span(5 last);
+		//	@include push(1);
+		//trapezoid($base-up,$base-down,$height,$color,$direction,$radious)
+		//$base-up:
+		//$base-down:
+		//$height:
+		//$color:
+		//$direction: (top,bottom,left,right)
+		@include trapezoid(200px,600px,520px,$orange,right,20px);
+
+		position: absolute;
+		z-index: 2;
+		top: 40px;
+	}
+
+	&__img-left {
+
+		//	@include span(6);
+
+		left: 0;
+		top: -55px;
+		background: url('../images/sections/hire_left.png') no-repeat;
+		height: 608px;
+		position: absolute;
+		z-index: 1;
+	}
+	@include pie-clearfix;
+}

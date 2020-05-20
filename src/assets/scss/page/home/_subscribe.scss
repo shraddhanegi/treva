@@ -1,0 +1,93 @@
+.subscribe {
+	margin-top: 30px;
+	margin-bottom: 80px;
+	float: left;
+	width: 100%;
+
+	&__heading {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__bottom-txt {
+
+		@include span(10);
+		@include push(1);
+
+		font-size: 1.2rem;
+		line-height: 2rem;
+		margin-top: 35px;
+		text-align: center;
+
+		@include sm {
+			@include span(6);
+			@include push(3);
+
+			font-size: 1.625rem;
+			line-height: 2.5rem;
+		}
+		@include md {
+			@include span(4);
+			@include push(4);
+
+			font-size: 1.625rem;
+			line-height: 2.5rem;
+		}
+	}
+
+	&__wrapper {
+		float: left;
+		margin-top: 68px;
+		@include span(12);
+		@include sm {
+			@include container(83%);
+		}
+
+		&__input {
+
+			@include span(6);
+			@include push(2);
+
+			box-sizing: border-box;
+			background: $off_white;
+			border-radius: 10px 0 0 10px;
+			border: 1px solid $off_white;
+			font-size: 1.125rem;
+			font-weight: $light-weight;
+			padding: 1.8%;
+			@include sm {
+				@include span(7);
+				@include push(3);
+
+				padding: 1.8%;
+			}
+			@include md {
+				@include span(8);
+				@include push(1);
+
+				padding: 1.2%;
+			}
+			@include lg {
+				padding: 1.1%;
+				@include span(8);
+				@include push(3);
+			}
+		}
+
+		&__btn {
+
+			@extend .button__dark_blue;
+			@include pull(3);
+			@include sm {
+				@include pull(3);
+			}
+			@include md {
+				@include pull(2);
+			}
+			@include lg {
+				@include pull(1);
+			}
+		}
+	}
+	@include pie-clearfix;
+}

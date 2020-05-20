@@ -1,0 +1,48 @@
+
+.nav {
+	margin-top: 31px;
+
+	.logo {
+		background: url('../images/logo/treva_logo.png') no-repeat;
+		background-size: 60%;
+		max-width: 100%;
+		width: 176px;
+		height: 49px;
+		float: left;
+		@include sm {
+			background-size: 100%;
+		}
+	}
+
+	&__wrapper {
+		float: right;
+		margin-top: 5px;
+		@include span(4 last);
+		@include pull(1);
+		@include lg {
+			margin-top: 24px;
+			@include span(1 of last 3);
+			@include pull(1);
+		}
+	}
+
+	&__sign-in {
+		@extend .button__white_small;
+
+		margin-right: 10px;
+		margin-bottom: 10px;
+		display: inline-block;
+
+		a {
+			color: $charcoal;
+		}
+	}
+
+	&__sign-up {
+		@extend .button__slate_blue;
+
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+	@include pie-clearfix;
+}

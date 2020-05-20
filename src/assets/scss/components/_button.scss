@@ -1,0 +1,26 @@
+
+.button {
+
+	//sign-up button
+	&__slate_blue {
+
+		@include button($button-small-padding,$slate_blue,$white,$button-small-font-size,$border-radious-small);
+	}
+
+	&__white_small {
+
+		@include button($button-small-padding,$white,$charcoal,$button-small-font-size,$border-radious-small);
+	}
+
+	&__white_medium {
+		@include button($button-medium-padding,$white,$royal_blue,$button-medium-font-size,$border-radious-medium);
+	}
+
+	&__royal_blue {
+		@include button($button-medium-padding,$royal_blue,$white,$button-medium-font-size,$border-radious-medium);
+	}
+
+	&__dark_blue {
+		@include button($button-large-padding,$dark_blue,$white,$button-large-font-size,$border-radious-large);
+	}
+}

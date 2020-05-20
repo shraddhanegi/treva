@@ -1,0 +1,70 @@
+.footer {
+	margin-top: 160px;
+
+	&__logo {
+		background: url('../images/logo/treva_logo.png') no-repeat;
+		width: 176px;
+		height: 49px;
+		float: left;
+		@include pie-clearfix;
+	}
+
+	&__menu {
+		//margin-left:160
+		@include span(12 last);
+		@include sm {
+			@include span(8 last);
+		}
+
+		&__first,
+		&__second,
+		&__third {
+			color: $quill_grey;
+			font-size: 1.125rem;
+			line-height: 2.188rem;
+			font-weight: $normal-weight;
+			float: left;
+			@include span(3);
+			@include sm {
+				@include span(3);
+			}
+			@include lg {
+				@include span(2);
+			}
+
+			@include push(1);
+			@include pie-clearfix;
+		}
+
+		ul h4 {
+			margin: 20px 0 30px 0;
+		}
+
+		ul li {
+			display: block;
+		}
+
+		ul li span.icon {
+			padding-right: 5px;
+			vertical-align: middle;
+		}
+
+		ul:first-child {
+			margin-left: 0;
+			@include sm {
+				@include push(0.6);
+			}
+			@include md {
+				@include push(0.6);
+			}
+			@include lg {
+				@include push(3);
+			}
+		}
+
+		&__links {
+			color: $quill_grey;
+		}
+	}
+	@include pie-clearfix;
+}

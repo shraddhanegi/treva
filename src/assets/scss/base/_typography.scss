@@ -1,0 +1,65 @@
+
+html,
+body {
+	font-family: $business-font;
+	font-weight: $light-weight;
+	color: $text-standard;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $white;
+	text-decoration: none;
+}
+
+ul li {
+	display: inline;
+}
+
+p {
+	font-size: 1.125rem;
+	line-height: 2.188rem;
+	color: $metalic_bronze;
+	font-weight: $normal-weight;
+}
+
+h1 {
+	font-size: 2rem;
+	line-height: 2.6rem;
+	@include lg {
+		font-size: 2.5rem;
+		line-height: 3.063rem;
+	}
+
+	color: $heading_black;
+	font-weight: $bold-weight;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.625rem;
+	line-height: 2.5rem;
+	color: $heading_black;
+	font-weight: $normal-weight;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.625rem;
+	line-height: 2.5rem;
+	color: $white;
+	font-weight: $semibold-weight;
+}
+
+h4 {
+	font-size: 1.563rem;
+	line-height: 1.875rem;
+	font-weight: $semibold-weight;
+}
+
+hr {
+	border: 1px solid $light_grey;
+}
