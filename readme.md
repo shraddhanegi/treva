@@ -10,3 +10,6 @@ Use below command to run the Project
 npm install
 npm run dev
 ```
+## to run Project
+
+Open index.html from dist folder
